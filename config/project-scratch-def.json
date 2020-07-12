@@ -1,0 +1,25 @@
+{
+    "orgName": "Rémi Le Guin",
+    "edition": "Developer",
+    "features": ["Communities", "Sites"],
+    "language": "en_US",
+    "settings": {
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        },
+        "experienceBundleSettings": {
+            "enableExperienceBundleMetadata": true
+        },
+        "languageSettings": {
+            "enableTranslationWorkbench": true
+        },
+        "sharingSettings": {
+            "enableSecureGuestAccess": true
+        },
+        "userManagementSettings": {
+            "enableEnhancedPermsetMgmt": true,
+            "enableEnhancedProfileMgmt": true,
+            "enableNewProfileUI": true
+        }
+    }
+}

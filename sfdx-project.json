@@ -1,0 +1,24 @@
+{
+    "packageDirectories": [
+        {
+            "path": "financing-request",
+            "default": true,
+            "package": "Financing Request",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "Communities Assets@1.0.0-1"
+                }
+            ]
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "48.0",
+    "packageAliases": {
+        "Communities Assets@1.0.0-1": "04tB0000000Oiq0IAC",
+        "Financing Request": "0Ho2X000000PAt1SAG",
+        "Financing Request@0.1.0-1": "04t2X000001IcIPQA0"
+    }
+}
