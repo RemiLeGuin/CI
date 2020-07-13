@@ -15,5 +15,6 @@ before_install:
 - "./sfdx/install"
 - export PATH=./sfdx/$(pwd):$PATH
 #Install sfdx-git-delta
+- gem install bundler
 - npm install sfdx-git-delta@latest --global
 - sgd --version
