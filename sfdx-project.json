@@ -2,7 +2,7 @@
     "packageDirectories": [
         {
             "path": "financing-request",
-            "default": true,
+            "default": false,
             "package": "Financing Request",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
@@ -11,6 +11,10 @@
                     "package": "Communities Assets@1.0.0-1"
                 }
             ]
+        },
+        {
+            "path": "omni-channel",
+            "default": true
         }
     ],
     "namespace": "",

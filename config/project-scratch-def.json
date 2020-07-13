@@ -1,7 +1,7 @@
 {
     "orgName": "Rémi Le Guin",
     "edition": "Developer",
-    "features": ["Communities", "Sites"],
+    "features": ["Communities", "LightningServiceConsole", "ServiceCloud", "Sites"],
     "language": "en_US",
     "settings": {
         "communitiesSettings": {
@@ -12,6 +12,9 @@
         },
         "languageSettings": {
             "enableTranslationWorkbench": true
+        },
+        "omniChannelSettings": {
+            "enableOmniChannel": true
         },
         "sharingSettings": {
             "enableSecureGuestAccess": true
