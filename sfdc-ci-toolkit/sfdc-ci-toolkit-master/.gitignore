@@ -1,0 +1,8 @@
+node_modules
+.yarnclean
+yarn.lock
+npm-debug.log
+.env
+*Result.json
+.xyconfig/
+package.xml

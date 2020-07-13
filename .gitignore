@@ -6,8 +6,8 @@
 .sfdx/
 .vscode/
 
-# SFDC CI Toolkit
-sfdc-ci-toolkit/
+# Unnecessary metadata
+financing-request/main/default/settings
 
 # Logs
 logs
