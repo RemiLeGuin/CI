@@ -5,7 +5,7 @@
             <profile>standard</profile>
         </profiles>
     </assignments>
-    <capacity>2</capacity>
+    <capacity>1</capacity>
     <enableAutoAccept>false</enableAutoAccept>
     <enableDecline>true</enableDecline>
     <enableDeclineReason>false</enableDeclineReason>
