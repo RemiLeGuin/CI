@@ -14,7 +14,8 @@ before_install:
 - wget -qO- $CLIURL | tar xJ -C sfdx --strip-components 1
 - "./sfdx/install"
 - export PATH=./sfdx/$(pwd):$PATH
+
+script:
 #Install sfdx-git-delta
-- gem install bundler
 - npm install sfdx-git-delta@latest --global
 - sgd --version
