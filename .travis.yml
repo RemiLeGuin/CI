@@ -18,4 +18,5 @@ before_install:
 script:
 #Install sfdx-git-delta
 - npm install sfdx-git-delta@latest --global
-- sgd --version
+- sgd --to HEAD --from HEAD^ --repo . --output .
+- cat package/package.xml
