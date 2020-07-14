@@ -23,4 +23,4 @@ script:
 - cat changed-sources/package/package.xml
 - cat changed-sources/destructiveChanges/destructiveChanges.xml
 - sfdx force:source:deploy --sourcepath changed-sources/force-app --targetusername CI --wait 10
-- sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges
+- sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges --targetusername CI
