@@ -1,23 +1,11 @@
 {
     "orgName": "Rémi Le Guin",
     "edition": "Developer",
-    "features": ["Communities", "LightningServiceConsole", "ServiceCloud", "Sites"],
+    "features": [],
     "language": "en_US",
     "settings": {
-        "communitiesSettings": {
-            "enableNetworksEnabled": true
-        },
-        "experienceBundleSettings": {
-            "enableExperienceBundleMetadata": true
-        },
         "languageSettings": {
             "enableTranslationWorkbench": true
-        },
-        "omniChannelSettings": {
-            "enableOmniChannel": true
-        },
-        "sharingSettings": {
-            "enableSecureGuestAccess": true
         },
         "userManagementSettings": {
             "enableEnhancedPermsetMgmt": true,

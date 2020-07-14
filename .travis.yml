@@ -2,15 +2,10 @@
 sudo: true
 
 before_install:
-#
-# The before_install steps downloads Salesforce CLI and installs it
-#
 
-#Assign variables
-- export CLIURL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-#Create SFDX directory
-- mkdir sfdx
 #Install Salesforce CLI
+- export CLIURL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+- mkdir sfdx
 - wget -qO- $CLIURL | tar xJ -C sfdx --strip-components 1
 - "./sfdx/install"
 - export PATH=./sfdx/$(pwd):$PATH
@@ -18,5 +13,10 @@ before_install:
 script:
 #Install sfdx-git-delta
 - npm install sfdx-git-delta@latest --global
-- sgd --to HEAD --from HEAD^ --repo . --output .
-- cat package/package.xml
+
+#Generate diff
+- sgd --to HEAD --from HEAD^ --repo . --output changed-sources/ --generate-delta
+- cat changed-sources/package/package.xml
+- cat changed-sources/destructiveChanges/destructiveChanges.xml
+- git add changed-sources/*
+- git commit -m 'Changed sources'
