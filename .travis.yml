@@ -21,4 +21,4 @@ script:
 - cat changed-sources/destructiveChanges/destructiveChanges.xml
 - git add changed-sources/*
 - git commit -m 'Changed sources'
-- git push
+- git push origin master
