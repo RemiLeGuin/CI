@@ -6,9 +6,6 @@
 .sfdx/
 .vscode/
 
-# Unnecessary metadata
-financing-request/main/default/settings
-
 # Logs
 logs
 *.log
