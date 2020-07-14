@@ -20,5 +20,5 @@ script:
 
 #Deploy files
 - sfdx force:source:convert --rootdir ci --outputdir src
-- sfdx force:mdapi:deploy --deploydir src --targetusername CI --wait 10 --singlepackage
-- sfdx force:mdapi:deploy --deploydir destructiveChanges --targetusername CI --wait 10 --singlepackage
+- sfdx force:mdapi:deploy --deploydir src --targetusername CI --wait 10
+- sfdx force:mdapi:deploy --deploydir destructiveChanges --targetusername CI --wait 10
