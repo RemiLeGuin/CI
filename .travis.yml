@@ -19,9 +19,3 @@ script:
 - sgd --to HEAD --from HEAD^ --repo . --output changed-sources/ --generate-delta
 - cat changed-sources/package/package.xml
 - cat changed-sources/destructiveChanges/destructiveChanges.xml
-
-#Push changed-sources
-- echo "machine github.com login $REPO_LOGIN password $REPO_PASSWORD" > $HOME/.netrc
-- git add changed-sources/*
-- git commit -m 'Changed sources'
-- git push origin master
