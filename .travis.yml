@@ -29,9 +29,5 @@ script:
 - cat changed-sources/destructiveChanges/destructiveChanges.xml
 
 #Deploy files
-- mkdir changed-sources/src
-- sfdx force:source:convert --rootdir changed-sources/ci --outputdir changed-sources/src
 - sfdx force:source:deploy --sourcepath changed-sources/ci --targetusername CI --wait 10
-- sfdx force:mdapi:deploy --deploydir changed-sources/ci --targetusername CI --wait 10
-- sfdx force:mdapi:deploy --deploydir changed-sources/src --targetusername CI --wait 10
 - sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges --targetusername CI --wait 10
