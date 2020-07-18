@@ -13,7 +13,7 @@ before_install:
 before_script:
 
 #Install sfdx-git-delta
-- npm install sfdx-git-delta@latest -g
+- npm install sfdx-git-delta@latest --global
 
 #Authorize target deployment org
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
@@ -24,8 +24,11 @@ script:
 #Generate diffs
 - mkdir changed-sources
 - sgd --to HEAD --from HEAD^ --repo . --output changed-sources/ --generate-delta
+- cat changed-sources/package/package.xml
+- cat changed-sources/destructiveChanges/destructiveChanges.xml
 
 #Deploy files
-- sfdx force:source:convert --rootdir changed-sources/force-app --outputdir changed-sources/src
-- sfdx force:mdapi:deploy --deploydir changed-sources/src --targetusername CI --wait 10
+#- sfdx force:source:convert --rootdir changed-sources/force-app --outputdir changed-sources/src
+#- sfdx force:mdapi:deploy --deploydir changed-sources/src --targetusername CI --wait 10
+- sfdx force:source:deploy --sourcepath changed-sources/force-app --targetusername CI --wait 10
 - sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges --targetusername CI --wait 10
