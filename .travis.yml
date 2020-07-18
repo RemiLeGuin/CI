@@ -24,11 +24,12 @@ script:
 #Generate diffs
 - mkdir changed-sources
 - sgd --to HEAD --from HEAD^ --repo . --output changed-sources/ --generate-delta
+- cat changed-sources/ci/main/default/objects/Account/fields/Test__c.field-meta.xml
 - cat changed-sources/package/package.xml
 - cat changed-sources/destructiveChanges/destructiveChanges.xml
 
 #Deploy files
 - mkdir changed-sources/src
-- sfdx force:source:convert --rootdir ci --outputdir changed-sources/src
-#- sfdx force:mdapi:deploy --deploydir changed-sources/src --targetusername CI --wait 10
-#- sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges --targetusername CI --wait 10
+- sfdx force:source:convert --sourcepath changed-sources/ci --outputdir changed-sources/src
+- sfdx force:mdapi:deploy --deploydir changed-sources/src --targetusername CI --wait 10
+- sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges --targetusername CI --wait 10
