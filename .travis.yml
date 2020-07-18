@@ -29,6 +29,6 @@ script:
 
 #Deploy files
 - mkdir changed-sources/src
-- sfdx force:source:convert --rootdir changed-sources/ci/ --outputdir changed-sources/src
-- sfdx force:mdapi:deploy --deploydir changed-sources/src --targetusername CI --wait 10
-- sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges --targetusername CI --wait 10
+- sfdx force:source:convert --rootdir ci --outputdir changed-sources/src
+#- sfdx force:mdapi:deploy --deploydir changed-sources/src --targetusername CI --wait 10
+#- sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges --targetusername CI --wait 10
