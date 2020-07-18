@@ -30,6 +30,8 @@ script:
 
 #Deploy files
 - mkdir changed-sources/src
-- sfdx force:source:convert --sourcepath changed-sources/ci/main/default/objects/Account/fields/Test__c.field-meta.xml --outputdir changed-sources/src
+- sfdx force:source:convert --rootdir changed-sources/ci --outputdir changed-sources/src
+- sfdx force:source:deploy --sourcepath changed-sources/ci --targetusername CI --wait 10
+- sfdx force:mdapi:deploy --deploydir changed-sources/ci --targetusername CI --wait 10
 - sfdx force:mdapi:deploy --deploydir changed-sources/src --targetusername CI --wait 10
 - sfdx force:mdapi:deploy --deploydir changed-sources/destructiveChanges --targetusername CI --wait 10
