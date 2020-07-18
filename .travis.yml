@@ -24,6 +24,7 @@ script:
 #Generate diffs
 - mkdir changed-sources
 - sgd --to HEAD --from HEAD^ --repo . --output changed-sources/ --generate-delta
+- cat changed-sources/
 - cat changed-sources/package/package.xml
 - cat changed-sources/destructiveChanges/destructiveChanges.xml
 
